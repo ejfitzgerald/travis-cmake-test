@@ -1,0 +1,12 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler:
+  - clang
+os:
+  - linux
+branches:
+  only:
+    - master
+script:
+  - mkdir -p build && cd build && cmake ../ && make && make test
